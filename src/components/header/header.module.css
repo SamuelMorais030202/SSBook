@@ -1,0 +1,80 @@
+.headerContainer {
+  background-color: var(--bg-primary);
+  width: 85vw;
+  border-radius: 0 0 32px;
+  box-shadow: 0 0 8px 0 var(--drop-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px;
+  gap: 24px;
+}
+
+.headerLogo {
+  Width: 100px;
+  Height: 60px;
+}
+
+.headerSearchLabel {
+  border: 1px solid var(--border-color);
+  width: 437px;
+  height: 40px;
+  padding: 6px, 8px, 6px, 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerSearchLabel input {
+  border: none;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.headerSearchLabel input:focus {
+  outline: none;
+}
+
+.headerNavList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.headerNavList li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .headerContainer {
+    width: 100vw;
+    justify-content: space-between;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  .headerNavList > :first-child, .headerNavList > :nth-child(2), .headerNavList hr {
+    display: none;
+  }
+
+  .headerSearchLabel {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .headerContainer {
+    width: 99vw;
+    justify-content: center;
+  }
+
+  .headerSearchLabel {
+    width: 260px;
+  }
+}
