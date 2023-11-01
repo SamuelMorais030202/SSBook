@@ -28,7 +28,7 @@ function Home() {
             Emprestados
           </li>
         </ul>
-        <hr />
+        <hr className={ styles.tabSeparator } />
       </div>
     </div>
   );

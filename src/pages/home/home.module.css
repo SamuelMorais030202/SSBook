@@ -11,7 +11,7 @@
   margin: auto;
 }
 
-.homeSelectTab hr {
+.tabSeparator {
   border: none;
   height: 1px;
   background-color: rgba(231, 231, 231, 1);
