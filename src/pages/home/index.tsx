@@ -30,6 +30,13 @@ function Home() {
         </ul>
         <hr className={ styles.tabSeparator } />
       </div>
+
+      <div className={ styles.favoritesBooksContainer }>
+        <div className={ styles.favoritesBooksHeader }>
+          <h2>Livros favoritos</h2>
+          <span>ver todos</span>
+        </div>
+      </div>
     </div>
   );
 }

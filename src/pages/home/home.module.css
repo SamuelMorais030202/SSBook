@@ -3,7 +3,7 @@
 }
 
 .homeSelectTab {
-  padding: 15px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -37,8 +37,62 @@
   border-bottom: 6px solid var(--bg-secondary);
 }
 
+.favoritesBooksContainer {
+  width: 72%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.favoritesBooksHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.favoritesBooksHeader h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--primary-text);
+}
+
+.favoritesBooksHeader span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--secundary-text);
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
-  .homeSelectTab {
+  .homeContainer {
+    margin-top: 0;
+  }
+
+  .favoritesBooksContainer {
     width: 95%;
+  }
+
+  .tabSeparator {
+    display: none;
+  }
+
+  .homeSelectTab {
+    background-color: var(--bg-primary);
+    padding: 10px;
+    width: 100%;
+    border-radius: 0 0 32px;
+    margin: -1px 0;
+  }
+
+  .favoritesBooksHeader h2 {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .favoritesBooksHeader span {
+    font-size: 17px;
+    line-height: 16px;
   }
 }
