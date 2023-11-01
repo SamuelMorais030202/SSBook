@@ -1,11 +1,16 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useFavoriteBooks } from '../../hooks/useFavoriteBooks';
 import { SelectTabType } from '../../types/selectTabTypes';
 import styles from './home.module.css';
 
 function Home() {
   const [selectTab, setSelectTab] = useState(SelectTabType.MyBooks);
+
+  const { data } = useFavoriteBooks();
+
+  console.log(data);
 
   const handleTabClick = (tabName : SelectTabType) => {
     setSelectTab(tabName);
@@ -41,4 +46,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default React.memo(Home);
