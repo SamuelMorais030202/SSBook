@@ -1,0 +1,20 @@
+.footerContainer {
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  height: 80px;
+}
+
+.footerContainer div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerContainer div p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--bg-primary)
+}

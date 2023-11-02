@@ -1,11 +1,52 @@
 .listFavoriteAuthorsContainer {
-
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .listFavoriteAuthorsHeader {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
 
+.listFavoriteAuthorsHeader h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--primary-text);
+}
+
+.listFavoriteAuthorsHeader span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--secundary-text);
+  cursor: pointer;
 }
 
 .listFavoriteAuthors {
-  
+  width: 85%;
+  display: flex;
+  gap: 24px;
+  padding: 10px;
+  overflow-x: scroll;
+}
+
+.listFavoriteAuthors::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .listFavoriteAuthorsHeader h2 {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .listFavoriteAuthorsHeader span {
+    font-size: 15px;
+    line-height: 16px;
+  }
 }
