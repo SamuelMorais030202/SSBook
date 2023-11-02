@@ -1,0 +1,31 @@
+.cardAuthor {
+  padding: 1px;
+  border-radius: 8px;
+  width: 296px;
+  height: 70px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.imageAuthor {
+  width: 68px;
+  height: 68px;
+  border-radius: 8px;
+}
+
+.authorText h4 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--primary-text);
+  margin-bottom: 4px;
+}
+
+.authorText p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--primary-text);
+}

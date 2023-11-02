@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
-import ListFavoritBooks from '../../components/list-favorit-books';
+import ListFavoriteAuthors from '../../components/list-favorite-authors';
+import ListFavoriteBooks from '../../components/list-favorite-books';
 import { SelectTabType } from '../../types/selectTabTypes';
 import styles from './home.module.css';
 
@@ -39,7 +40,8 @@ function Home() {
         </div>
       </div>
 
-      <ListFavoritBooks />
+      <ListFavoriteBooks />
+      <ListFavoriteAuthors />
     </div>
   );
 }

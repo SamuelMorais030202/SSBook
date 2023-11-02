@@ -1,9 +1,9 @@
 import React from 'react';
 import { useFavoriteBooks } from '../../hooks/useFavoriteBooks';
 import BookCard from '../book';
-import styles from './listFavoritsBooks.module.css';
+import styles from './listFavoriteBooks.module.css';
 
-function ListFavoritBooks() {
+function ListFavoriteBooks() {
   const { data } = useFavoriteBooks();
 
   return (
@@ -19,4 +19,4 @@ function ListFavoritBooks() {
   );
 }
 
-export default React.memo(ListFavoritBooks);
+export default React.memo(ListFavoriteBooks);
