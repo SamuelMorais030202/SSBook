@@ -1,19 +1,23 @@
 import { IBook } from '../../types/booksFetchResponse';
 
-function BookCard(props : IBook) {
+function BookCard({ author, cover, name } : IBook) {
+  const truncateTitle = name.length > 25
+    ? `${name.slice(0, 25)}...`
+    : name;
+
   return (
-    <div>
+    <section>
       <img
-        src={ props?.cover }
-        alt={ props?.name }
+        src={ cover }
+        alt={ name }
       />
       <div>
-        <h3>{ props?.name }</h3>
+        <h4>{ truncateTitle }</h4>
         <p>
-          { props?.author.name }
+          { author.name }
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -1,5 +1,57 @@
 .listFavoritsBooksContainer {
+  width: 74%;
+  height: 380px;
+  margin: auto;
+  margin-top: 5px;
 }
 
 .listBooks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  height: 100%;
+  overflow-x: scroll;
+  padding: 15px;
+}
+
+.listBooks::-webkit-scrollbar {
+  display: none;
+}
+
+.listBooks section {
+  width: 136px;
+  height: 262px;
+  padding: 4px;
+}
+
+.listBooks section img {
+  width: 136px;
+  height: 198px;
+  border-radius: 10px;
+  border: none;
+}
+
+.listBooks h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--primary-text);
+  margin: 5px 0 2px 4px;
+}
+
+.listBooks p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--subtitle);
+  margin-left: 4px;
+}
+
+@media (max-width: 767px) {
+  .listFavoritsBooksContainer {
+    margin-top: 2px;
+    width: 100%;
+    padding-left: 3px;
+  }
 }
