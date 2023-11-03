@@ -7,7 +7,7 @@ export function useBookId(id : string) {
   const query = bookId(id);
   const { data } = useQuery({
     queryFn: () => fetche(query),
-    queryKey: ['book'],
+    queryKey: ['book', id],
     staleTime: 1000 * 60 * 1,
   });
 
