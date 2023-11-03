@@ -3,6 +3,7 @@
   height: 330px;
   margin: auto;
   margin-top: 5px;
+  margin-bottom: 58px;
 }
 
 .listBooks {
@@ -49,10 +50,49 @@
   margin-left: 4px;
 }
 
+.favoritesBooksContainer {
+  width: 98%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.favoritesBooksHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.favoritesBooksHeader h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--primary-text);
+}
+
+.favoritesBooksHeader span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--secundary-text);
+  cursor: pointer;
+}
+
+
 @media (max-width: 767px) {
   .listFavoritsBooksContainer {
     margin-top: 2px;
     width: 100%;
     padding-left: 3px;
+  }
+
+  .favoritesBooksHeader h2 {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .favoritesBooksHeader span {
+    font-size: 17px;
+    line-height: 16px;
   }
 }
