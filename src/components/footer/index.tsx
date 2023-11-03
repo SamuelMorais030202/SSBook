@@ -1,9 +1,9 @@
-import logoFooter from '../../assets/logo-footer.png';
+import logoFooter from '../../assets/soon-footer.png';
 import styles from './footer.module.css';
 import start from '../../assets/start.png';
 import add from '../../assets/add.png';
-import heart from '../../assets/icon-coracao.png';
-import search from '../../assets/lupa.png';
+import heart from '../../assets/icon-heart.png';
+import search from '../../assets/icon-search.png';
 
 function Footer() {
   return (

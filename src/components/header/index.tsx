@@ -1,21 +1,21 @@
 import styles from './header.module.css';
-import logo from '../../assets/logo.png';
-import lupa from '../../assets/lupa.png';
-import iconAdd from '../../assets/icon-adicionar.png';
-import iconFavorite from '../../assets/icon-coracao.png';
+import soon from '../../assets/soon.png';
+import iconSearch from '../../assets/icon-search.png';
+import iconAdd from '../../assets/icon-add.png';
+import iconFavorite from '../../assets/icon-heart.png';
 import avatar from '../../assets/avatar.png';
 
 function Header() {
   return (
     <header className={ styles.headerContainer }>
-      <img src={ logo } alt="Logo SSBook" className={ styles.headerLogo } />
+      <img src={ soon } alt="Logo SSBook" className={ styles.headerLogo } />
       <label htmlFor="search-book" className={ styles.headerSearchLabel }>
         <input
           type="text"
           placeholder="Busque um livro"
           id="search-book"
         />
-        <img src={ lupa } alt="Lupa search" />
+        <img src={ iconSearch } alt="Icon search" />
       </label>
       <nav>
         <ul className={ styles.headerNavList }>
