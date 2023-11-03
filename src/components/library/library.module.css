@@ -68,22 +68,22 @@
   display: none;
 }
 
-.listOfBooks section {
+.listOfBooks a {
   min-width: 296px;
   height: 100px;
   display: flex;
   align-items: center;
   gap: 16px;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-.listOfBooks section img {
+.listOfBooks a img {
   width: 68px;
   height: 100px;
   border-radius: 9px;
 }
 
-.listOfBooks section div {
+.listOfBooks a div {
   width: 180px;
   height: 58px;
   display: flex;
@@ -92,14 +92,14 @@
   gap: 6px;
 }
 
-.listOfBooks section h4 {
+.listOfBooks a h4 {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: var(--primary-text);
 }
 
-.listOfBooks section p {
+.listOfBooks a p {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -107,12 +107,12 @@
 }
 
 @media (max-width: 767px) {
-  .listOfBooks section {
+  .listOfBooks a {
     width: 100%;
     align-items: flex-start;
   }
 
-  .listOfBooks section div {
+  .listOfBooks a div {
     width: 80%;
   }
 }

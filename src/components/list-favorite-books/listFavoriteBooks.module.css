@@ -19,14 +19,14 @@
   display: none;
 }
 
-.listBooks section {
+.listBooks a {
   width: 136px;
   height: 262px;
   padding: 4px;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-.listBooks section img {
+.listBooks a img {
   width: 136px;
   height: 198px;
   border-radius: 10px;

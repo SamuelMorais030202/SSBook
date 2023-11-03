@@ -11,7 +11,7 @@ function Routes() {
       <Route path="/" element={ <Layout /> }>
         <Route index element={ <Home /> } />
         <Route path="favorite-books" element={ <FavoriteBooks /> } />
-        <Route path="books/:book" element={ <Book /> } />
+        <Route path="books/:bookId" element={ <Book /> } />
       </Route>
       <Route path="/*" element={ <NotFound /> } />
     </Switch>

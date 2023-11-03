@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import { IBook } from '../../types/booksFetchResponse';
 
-function BookCard({ author, cover, name } : IBook) {
+function BookCard({ author, cover, name, id } : IBook) {
   const truncateTitle = name.length > 28
     ? `${name.slice(0, 28)}...`
     : name;
 
   return (
-    <section>
+    <Link to={ `/books/${id}` }>
       <img
         src={ cover }
         alt={ name }
@@ -17,7 +18,7 @@ function BookCard({ author, cover, name } : IBook) {
           { author.name }
         </p>
       </div>
-    </section>
+    </Link>
   );
 }
 
