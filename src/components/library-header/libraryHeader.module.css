@@ -1,0 +1,50 @@
+.libraryHeader {
+  margin-top: 18px;
+  padding: 8px;
+}
+
+.libraryHeader h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--primary-text);
+}
+
+.libraryFilters {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 2px;
+}
+
+.libraryFiltersList {
+  height: 32px;
+  width: 88px;
+  list-style: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--primary-text);
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.libraryFilterBook {
+  height: 32px;
+  width: 71px;
+  background-color: var(--bg-secondary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--bg-primary);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

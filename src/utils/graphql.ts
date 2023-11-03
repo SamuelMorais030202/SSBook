@@ -30,7 +30,8 @@ export function allBooks() {
       cover,
       author {
         name
-      }
+      },
+      category
     }
   }`;
 }

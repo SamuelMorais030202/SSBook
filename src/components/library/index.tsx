@@ -1,52 +1,23 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
 import { useAllBooks } from '../../hooks/useAllBooks';
 import BookCard from '../book';
+import LibraryHeader from '../library-header';
 import styles from './library.module.css';
 
 function Library() {
   const [filterBooks, setFilterBooks] = useState('ALLBOOKS');
   const { data } = useAllBooks();
 
+  const filteredBooks = filterBooks === 'ALLBOOKS'
+    ? data
+    : data.filter((book) => book.category === filterBooks);
+
   return (
     <div className={ styles.libraryContainer }>
-      <div className={ styles.libraryHeader }>
-        <h2>Biblioteca</h2>
-        <ul className={ styles.libraryFilters }>
-          <li
-            className={ filterBooks === 'ALLBOOKS'
-              ? styles.libraryFilterBook : styles.libraryFiltersList }
-            onClick={ () => setFilterBooks('ALLBOOKS') }
-          >
-            Todos
-          </li>
-          <li
-            className={ filterBooks === 'ROMANCE'
-              ? styles.libraryFilterBook : styles.libraryFiltersList }
-            onClick={ () => setFilterBooks('ROMANCE') }
-          >
-            Romance
-          </li>
-          <li
-            className={ filterBooks === 'ADVENTURE'
-              ? styles.libraryFilterBook : styles.libraryFiltersList }
-            onClick={ () => setFilterBooks('ADVENTURE') }
-          >
-            Aventura
-          </li>
-          <li
-            className={ filterBooks === 'COMEDY'
-              ? styles.libraryFilterBook : styles.libraryFiltersList }
-            onClick={ () => setFilterBooks('COMEDY') }
-          >
-            Comédia
-          </li>
-        </ul>
-      </div>
+      <LibraryHeader filterBooks={ filterBooks } setFilterBooks={ setFilterBooks } />
       <div className={ styles.listOfBooks }>
         {
-          data?.map((book) => (
+          filteredBooks?.map((book) => (
             <BookCard key={ book.id } { ...book } />
           ))
         }
