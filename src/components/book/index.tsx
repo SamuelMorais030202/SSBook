@@ -1,8 +1,8 @@
 import { IBook } from '../../types/booksFetchResponse';
 
 function BookCard({ author, cover, name } : IBook) {
-  const truncateTitle = name.length > 25
-    ? `${name.slice(0, 25)}...`
+  const truncateTitle = name.length > 28
+    ? `${name.slice(0, 28)}...`
     : name;
 
   return (

@@ -23,6 +23,7 @@
   width: 136px;
   height: 262px;
   padding: 4px;
+  cursor: pointer;
 }
 
 .listBooks section img {

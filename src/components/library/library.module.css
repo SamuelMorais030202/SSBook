@@ -52,3 +52,67 @@
   justify-content: center;
   cursor: pointer;
 }
+
+.listOfBooks {
+  width: 90%;
+  height: 348px;
+  margin-top: 8px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  overflow-y: scroll;
+}
+
+.listOfBooks::-webkit-scrollbar {
+  display: none;
+}
+
+.listOfBooks section {
+  min-width: 296px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.listOfBooks section img {
+  width: 68px;
+  height: 100px;
+  border-radius: 9px;
+}
+
+.listOfBooks section div {
+  width: 180px;
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.listOfBooks section h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--primary-text);
+}
+
+.listOfBooks section p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--subtitle);
+}
+
+@media (max-width: 767px) {
+  .listOfBooks section {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .listOfBooks section div {
+    width: 80%;
+  }
+}
