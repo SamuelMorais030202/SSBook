@@ -14,7 +14,9 @@ function BookCard({ author, cover, name, id } : IBook) {
       />
       <div>
         <h4>{ truncateTitle }</h4>
-        <p>
+        <p
+          data-testid={ `paragraph-${id}` }
+        >
           { author.name }
         </p>
       </div>

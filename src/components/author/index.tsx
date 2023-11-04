@@ -6,8 +6,8 @@ function Author({ booksCount, name, picture } : IAuthor) {
     <section className={ styles.cardAuthor }>
       <img src={ picture } alt={ name } className={ styles.imageAuthor } />
       <div className={ styles.authorText }>
-        <h4>{ name }</h4>
-        <p>{ `${booksCount} livros` }</p>
+        <h4 data-testid={ `author-${name}` }>{ name }</h4>
+        <p data-testid={ `author-${name}-${booksCount}` }>{ `${booksCount} livros` }</p>
       </div>
     </section>
   );
