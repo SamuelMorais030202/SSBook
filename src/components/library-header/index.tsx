@@ -18,6 +18,7 @@ function LibraryHeader({ filterBooks, setFilterBooks } : ILibraryHeaderProps) {
           className={ filterBooks === BookFiltersTypes.ALLBOOKS
             ? styles.libraryFilterBook : styles.libraryFiltersList }
           onClick={ () => setFilterBooks(BookFiltersTypes.ALLBOOKS) }
+          data-testid="filter-allbooks"
         >
           Todos
         </li>
@@ -25,6 +26,7 @@ function LibraryHeader({ filterBooks, setFilterBooks } : ILibraryHeaderProps) {
           className={ filterBooks === BookFiltersTypes.ROMANCE
             ? styles.libraryFilterBook : styles.libraryFiltersList }
           onClick={ () => setFilterBooks(BookFiltersTypes.ROMANCE) }
+          data-testid="filter-romance"
         >
           Romance
         </li>
@@ -32,6 +34,7 @@ function LibraryHeader({ filterBooks, setFilterBooks } : ILibraryHeaderProps) {
           className={ filterBooks === BookFiltersTypes.ADVENTURE
             ? styles.libraryFilterBook : styles.libraryFiltersList }
           onClick={ () => setFilterBooks(BookFiltersTypes.ADVENTURE) }
+          data-testid="filter-adventure"
         >
           Aventura
         </li>
@@ -39,6 +42,7 @@ function LibraryHeader({ filterBooks, setFilterBooks } : ILibraryHeaderProps) {
           className={ filterBooks === BookFiltersTypes.COMEDY
             ? styles.libraryFilterBook : styles.libraryFiltersList }
           onClick={ () => setFilterBooks(BookFiltersTypes.COMEDY) }
+          data-testid="filter-comedy"
         >
           Comédia
         </li>

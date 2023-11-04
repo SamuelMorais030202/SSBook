@@ -17,7 +17,7 @@ function Footer() {
         </p>
       </div>
       <div className={ styles.footerForSmallScreens }>
-        <ul className={ styles.footerIcons }>
+        <ul className={ styles.footerIcons } data-testid="icons-footer">
           <li>
             <img src={ start } alt="Start icon" />
             Início

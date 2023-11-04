@@ -51,10 +51,10 @@ function Book() {
           </section>
           <section className={ styles.bookDescriptions }>
             <header className={ styles.bookDescrptionHeader }>
-              <h2>{ data?.name }</h2>
-              <p>{ data?.author.name }</p>
+              <h2 data-testid="book-name">{ data?.name }</h2>
+              <p data-testid="author-name">{ data?.author.name }</p>
             </header>
-            <div className={ styles.bookDescriptionText }>
+            <div className={ styles.bookDescriptionText } data-testid="book-description">
               {
                 paragraphs?.map((paragraph, index) => (
                   <p key={ index }>{ paragraph }</p>

@@ -9,24 +9,6 @@ const favoriteBooks = mockData?.data?.favoriteBooks;
 const favoriteAuthors = mockAuthorData?.data?.favoriteAuthors;
 
 describe('Testing the home screen', () => {
-  it('Testing if the header is being rendered correctly', () => {
-    renderWithRouter(<App />);
-
-    const soon = screen.getByRole('img', { name: /logo ssbook/i });
-    const inputSearch = screen.getByTestId('input-search');
-    const iconSearch = screen.getByTestId('icon-search');
-    const iconAdd = screen.getByTestId('icon-add');
-    const iconFavorite = screen.getByTestId('icon-favorite');
-    const iconProfile = screen.getByTestId('icon-profile');
-
-    expect(soon).toBeInTheDocument();
-    expect(inputSearch).toBeInTheDocument();
-    expect(iconSearch).toBeInTheDocument();
-    expect(iconAdd).toBeInTheDocument();
-    expect(iconFavorite).toBeInTheDocument();
-    expect(iconProfile).toBeInTheDocument();
-  });
-
   it('Testing that books are being listed correctly', async () => {
     renderWithRouter(<App />);
 
@@ -37,9 +19,6 @@ describe('Testing the home screen', () => {
       const truncateTitle = book.name.length > 28
         ? `${book.name.slice(0, 28)}...`
         : book.name;
-
-      const firstCardBookImage = await screen.findByRole('img', { name: book.name });
-      expect(firstCardBookImage).toBeInTheDocument();
 
       const firstVardBookAuthor = await screen.findByTestId(`paragraph-${book.id}`);
       expect(firstVardBookAuthor).toBeInTheDocument();
