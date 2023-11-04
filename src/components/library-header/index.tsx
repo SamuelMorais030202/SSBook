@@ -2,10 +2,11 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import styles from './libraryHeader.module.css';
+import { BookFiltersTypes } from '../../types/bookFiltersTypes';
 
 interface ILibraryHeaderProps {
-  filterBooks: string;
-  setFilterBooks: (value: string) => void;
+  filterBooks: number;
+  setFilterBooks: (value: number) => void;
 }
 
 function LibraryHeader({ filterBooks, setFilterBooks } : ILibraryHeaderProps) {
@@ -14,30 +15,30 @@ function LibraryHeader({ filterBooks, setFilterBooks } : ILibraryHeaderProps) {
       <h2>Biblioteca</h2>
       <ul className={ styles.libraryFilters }>
         <li
-          className={ filterBooks === 'ALLBOOKS'
+          className={ filterBooks === BookFiltersTypes.ALLBOOKS
             ? styles.libraryFilterBook : styles.libraryFiltersList }
-          onClick={ () => setFilterBooks('ALLBOOKS') }
+          onClick={ () => setFilterBooks(BookFiltersTypes.ALLBOOKS) }
         >
           Todos
         </li>
         <li
-          className={ filterBooks === 'ROMANCE'
+          className={ filterBooks === BookFiltersTypes.ROMANCE
             ? styles.libraryFilterBook : styles.libraryFiltersList }
-          onClick={ () => setFilterBooks('ROMANCE') }
+          onClick={ () => setFilterBooks(BookFiltersTypes.ROMANCE) }
         >
           Romance
         </li>
         <li
-          className={ filterBooks === 'ADVENTURE'
+          className={ filterBooks === BookFiltersTypes.ADVENTURE
             ? styles.libraryFilterBook : styles.libraryFiltersList }
-          onClick={ () => setFilterBooks('ADVENTURE') }
+          onClick={ () => setFilterBooks(BookFiltersTypes.ADVENTURE) }
         >
           Aventura
         </li>
         <li
-          className={ filterBooks === 'COMEDY'
+          className={ filterBooks === BookFiltersTypes.COMEDY
             ? styles.libraryFilterBook : styles.libraryFiltersList }
-          onClick={ () => setFilterBooks('COMEDY') }
+          onClick={ () => setFilterBooks(BookFiltersTypes.COMEDY) }
         >
           Comédia
         </li>

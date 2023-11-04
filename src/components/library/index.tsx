@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { useAllBooks } from '../../hooks/useAllBooks';
+import { BookFiltersTypes } from '../../types/bookFiltersTypes';
 import BookCard from '../book';
 import LibraryHeader from '../library-header';
 import styles from './library.module.css';
 
 function Library() {
-  const [filterBooks, setFilterBooks] = useState('ALLBOOKS');
+  const [filterBooks, setFilterBooks] = useState(BookFiltersTypes.ALLBOOKS);
   const { data } = useAllBooks();
 
-  const filteredBooks = filterBooks === 'ALLBOOKS'
+  const filteredBooks = filterBooks === BookFiltersTypes.ALLBOOKS
     ? data
-    : data.filter((book) => book.category === filterBooks);
+    : data.filter((book) => book.category === BookFiltersTypes[filterBooks]);
 
   return (
     <div className={ styles.libraryContainer }>
