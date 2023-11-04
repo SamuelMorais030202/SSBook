@@ -82,3 +82,29 @@
   gap: 15px;
   margin-top: 10px;
 }
+
+@media (max-width: 884px) {
+  .bookPageContainer {
+    width: 95%;
+    margin-top: 190px;
+  }
+
+  .firstCardBook {
+    margin-top: -190px;
+  }
+
+  .bookDescrptionHeader {
+    margin-top: -190px;
+    width: 100%;
+    height: 140px;
+  }
+
+  .bookDescrptionHeader h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .bookDescrptionHeader p {
+    font-size: 22px;
+  }
+}
