@@ -9,7 +9,7 @@ function ListFavoriteAuthors() {
   return (
     <section className={ styles.listFavoriteAuthorsContainer }>
       <header className={ styles.listFavoriteAuthorsHeader }>
-        <h2>Artistas favoritos</h2>
+        <h1>Autores favoritos</h1>
         <span>ver todos</span>
       </header>
       <section className={ styles.listFavoriteAuthors }>

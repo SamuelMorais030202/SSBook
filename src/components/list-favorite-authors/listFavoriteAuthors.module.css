@@ -12,15 +12,13 @@
   padding: 10px;
 }
 
-.listFavoriteAuthorsHeader h2 {
-  font-weight: 700;
+.listFavoriteAuthorsHeader h1 {
   font-size: 28px;
   line-height: 32px;
   color: var(--primary-text);
 }
 
 .listFavoriteAuthorsHeader span {
-  font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   color: var(--secundary-text);
@@ -44,7 +42,7 @@
     width: 100%;
   }
 
-  .listFavoriteAuthorsHeader h2 {
+  .listFavoriteAuthorsHeader h1 {
     font-size: 20px;
     line-height: 23px;
   }

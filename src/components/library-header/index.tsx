@@ -12,7 +12,7 @@ interface ILibraryHeaderProps {
 function LibraryHeader({ filterBooks, setFilterBooks } : ILibraryHeaderProps) {
   return (
     <div className={ styles.libraryHeader }>
-      <h2>Biblioteca</h2>
+      <h1>Biblioteca</h1>
       <ul className={ styles.libraryFilters }>
         <li
           className={ filterBooks === BookFiltersTypes.ALLBOOKS

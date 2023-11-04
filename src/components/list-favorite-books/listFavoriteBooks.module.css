@@ -32,10 +32,9 @@
   height: 198px;
   border-radius: 10px;
   border: none;
-}
+} 
 
 .listBooks h4 {
-  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: var(--primary-text);
@@ -63,15 +62,13 @@
   padding: 15px;
 }
 
-.favoritesBooksHeader h2 {
-  font-weight: 700;
+.favoritesBooksHeader h1 {
   font-size: 28px;
   line-height: 32px;
   color: var(--primary-text);
 }
 
 .favoritesBooksHeader span {
-  font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   color: var(--secundary-text);
@@ -86,7 +83,7 @@
     padding-left: 3px;
   }
 
-  .favoritesBooksHeader h2 {
+  .favoritesBooksHeader h1 {
     font-size: 20px;
     line-height: 23px;
   }

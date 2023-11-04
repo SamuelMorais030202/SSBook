@@ -24,5 +24,6 @@ body {
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   background-color: rgba(247, 247, 247, 1);
+  font-weight: 700;
 }
 

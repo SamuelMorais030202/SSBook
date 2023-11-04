@@ -3,8 +3,7 @@
   padding: 8px;
 }
 
-.libraryHeader h2 {
-  font-weight: 700;
+.libraryHeader h1 {
   font-size: 28px;
   line-height: 32px;
   color: var(--primary-text);
@@ -47,4 +46,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .libraryHeader h1 {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }

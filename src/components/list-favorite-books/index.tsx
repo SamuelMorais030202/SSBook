@@ -10,7 +10,7 @@ function ListFavoriteBooks() {
     <section className={ styles.listFavoritsBooksContainer }>
       <div className={ styles.favoritesBooksContainer }>
         <header className={ styles.favoritesBooksHeader }>
-          <h2>Livros favoritos</h2>
+          <h1>Livros favoritos</h1>
           <span>ver todos</span>
         </header>
       </div>
