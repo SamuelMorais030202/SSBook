@@ -7,21 +7,21 @@ function ListFavoriteBooks() {
   const { data } = useFavoriteBooks();
 
   return (
-    <div className={ styles.listFavoritsBooksContainer }>
+    <section className={ styles.listFavoritsBooksContainer }>
       <div className={ styles.favoritesBooksContainer }>
-        <div className={ styles.favoritesBooksHeader }>
+        <header className={ styles.favoritesBooksHeader }>
           <h2>Livros favoritos</h2>
           <span>ver todos</span>
-        </div>
+        </header>
       </div>
-      <div className={ styles.listBooks }>
+      <section className={ styles.listBooks }>
         {
           data?.map((book) => (
             <BookCard key={ book.id } { ...book } />
           ))
         }
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 

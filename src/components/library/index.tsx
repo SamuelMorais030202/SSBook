@@ -14,7 +14,7 @@ function Library() {
     : data.filter((book) => book.category === BookFiltersTypes[filterBooks]);
 
   return (
-    <div className={ styles.libraryContainer }>
+    <section className={ styles.libraryContainer }>
       <LibraryHeader filterBooks={ filterBooks } setFilterBooks={ setFilterBooks } />
       <div className={ styles.listOfBooks }>
         {
@@ -23,7 +23,7 @@ function Library() {
           ))
         }
       </div>
-    </div>
+    </section>
   );
 }
 

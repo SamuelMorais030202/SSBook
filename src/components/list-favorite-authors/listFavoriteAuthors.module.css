@@ -40,6 +40,10 @@
 }
 
 @media (max-width: 767px) {
+  .listFavoriteAuthorsHeader {
+    width: 100%;
+  }
+
   .listFavoriteAuthorsHeader h2 {
     font-size: 20px;
     line-height: 23px;

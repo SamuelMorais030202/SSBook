@@ -7,19 +7,19 @@ function ListFavoriteAuthors() {
   const { data } = useFavoriteAuthors();
 
   return (
-    <div className={ styles.listFavoriteAuthorsContainer }>
-      <div className={ styles.listFavoriteAuthorsHeader }>
+    <section className={ styles.listFavoriteAuthorsContainer }>
+      <header className={ styles.listFavoriteAuthorsHeader }>
         <h2>Artistas favoritos</h2>
         <span>ver todos</span>
-      </div>
-      <div className={ styles.listFavoriteAuthors }>
+      </header>
+      <section className={ styles.listFavoriteAuthors }>
         {
           data?.map((author) => (
             <Author key={ author.id } { ...author } />
           ))
         }
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 

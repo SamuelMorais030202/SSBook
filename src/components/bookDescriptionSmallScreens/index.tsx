@@ -30,21 +30,21 @@ function BookDescriptionSmallScreens({
           } }
           className={ styles.headerSmallScreens }
         >
-          <div className={ styles.iconsSmallScreens }>
+          <header className={ styles.iconsSmallScreens }>
             <button onClick={ () => navigate('/') }>
               <img src={ iconBack } alt="Icon back" />
             </button>
             <button>
               <img src={ iconOverflow } alt="Icon overflow" />
             </button>
-          </div>
+          </header>
         </section>
 
         <section className={ styles.descriptionSmallScreens }>
-          <div className={ styles.headerDescriptionSmallScreens }>
+          <header className={ styles.headerDescriptionSmallScreens }>
             <h2>{ name }</h2>
             <span><img src={ favoriteIcon } alt="Favorite icon" /></span>
-          </div>
+          </header>
           <p className={ styles.nameAuthor }>{ author.name }</p>
           <div className={ styles.textDescriptionSmallScreens }>
             {

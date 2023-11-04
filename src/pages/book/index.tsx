@@ -29,8 +29,8 @@ function Book() {
   return (
     <>
       <Header />
-      <article className={ styles.bookPage }>
-        <div className={ styles.bookPageContainer }>
+      <main className={ styles.bookPage }>
+        <section className={ styles.bookPageContainer }>
 
           <section className={ styles.firstCardBook }>
             <img src={ data?.cover } alt="Author" className={ styles.imageBook } />
@@ -50,10 +50,10 @@ function Book() {
             </ul>
           </section>
           <section className={ styles.bookDescriptions }>
-            <div className={ styles.bookDescrptionHeader }>
+            <header className={ styles.bookDescrptionHeader }>
               <h2>{ data?.name }</h2>
               <p>{ data?.author.name }</p>
-            </div>
+            </header>
             <div className={ styles.bookDescriptionText }>
               {
                 paragraphs?.map((paragraph, index) => (
@@ -63,8 +63,8 @@ function Book() {
             </div>
           </section>
 
-        </div>
-      </article>
+        </section>
+      </main>
       <Footer />
     </>
   );
