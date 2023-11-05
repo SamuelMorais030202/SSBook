@@ -5,7 +5,7 @@ import { IBook } from '../types/booksFetchResponse';
 
 export function useFavoriteBooks() {
   const query = favoriteBooks();
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryFn: () => fetche(query),
     queryKey: ['favoriteBooks'],
     staleTime: 1000 * 60 * 1,
@@ -13,5 +13,5 @@ export function useFavoriteBooks() {
 
   const response = data?.data?.data?.favoriteBooks;
 
-  return { data: response as IBook[] };
+  return { data: response as IBook[], isLoading };
 }

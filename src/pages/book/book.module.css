@@ -3,6 +3,10 @@
   justify-content: flex-end;
 }
 
+.isLoading {
+  height: 100vh;
+}
+
 .bookPageContainer {
   width: 90%;
   display: flex;

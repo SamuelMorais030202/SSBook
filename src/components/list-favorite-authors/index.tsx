@@ -1,10 +1,11 @@
 import React from 'react';
 import { useFavoriteAuthors } from '../../hooks/useFavoriteAuthors';
 import Author from '../author';
+import Loading from '../loading';
 import styles from './listFavoriteAuthors.module.css';
 
 function ListFavoriteAuthors() {
-  const { data } = useFavoriteAuthors();
+  const { data, isLoading } = useFavoriteAuthors();
 
   return (
     <section className={ styles.listFavoriteAuthorsContainer }>
@@ -14,9 +15,13 @@ function ListFavoriteAuthors() {
       </header>
       <section className={ styles.listFavoriteAuthors }>
         {
-          data?.map((author) => (
-            <Author key={ author.id } { ...author } />
-          ))
+          isLoading
+            ? <Loading />
+            : (
+              data?.map((author) => (
+                <Author key={ author.id } { ...author } />
+              ))
+            )
         }
       </section>
     </section>

@@ -5,7 +5,7 @@ import { favoriteAuthors } from '../utils/graphql';
 
 export function useFavoriteAuthors() {
   const query = favoriteAuthors();
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryFn: () => fetche(query),
     queryKey: ['favoriteAuthors'],
     staleTime: 1000 * 60 * 1,
@@ -13,5 +13,5 @@ export function useFavoriteAuthors() {
 
   const reponse = data?.data?.data?.favoriteAuthors;
 
-  return { data: reponse as IAuthor[] };
+  return { data: reponse as IAuthor[], isLoading };
 }

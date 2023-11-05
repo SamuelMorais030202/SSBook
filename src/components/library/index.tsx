@@ -3,11 +3,12 @@ import { useAllBooks } from '../../hooks/useAllBooks';
 import { BookFiltersTypes } from '../../types/bookFiltersTypes';
 import BookCard from '../book';
 import LibraryHeader from '../library-header';
+import Loading from '../loading';
 import styles from './library.module.css';
 
 function Library() {
   const [filterBooks, setFilterBooks] = useState(BookFiltersTypes.ALLBOOKS);
-  const { data } = useAllBooks();
+  const { data, isLoading } = useAllBooks();
 
   const filteredBooks = filterBooks === BookFiltersTypes.ALLBOOKS
     ? data
@@ -18,9 +19,13 @@ function Library() {
       <LibraryHeader filterBooks={ filterBooks } setFilterBooks={ setFilterBooks } />
       <div className={ styles.listOfBooks }>
         {
-          filteredBooks?.map((book) => (
-            <BookCard key={ book.id } { ...book } />
-          ))
+          isLoading
+            ? <Loading />
+            : (
+              filteredBooks?.map((book) => (
+                <BookCard key={ book.id } { ...book } />
+              ))
+            )
         }
       </div>
     </section>

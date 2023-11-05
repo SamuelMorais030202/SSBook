@@ -10,14 +10,19 @@ import styles from './book.module.css';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import BookDescriptionSmallScreens from '../../components/bookDescriptionSmallScreens';
+import Loading from '../../components/loading';
 
 function Book() {
   const isSmallScreen = useMediaQuery({ maxWidth: 768 });
   const params = useParams();
-  const { data } = useBookId(params?.bookId as string);
+  const { data, isLoading } = useBookId(params?.bookId as string);
 
-  if (!data) {
-    return <div>Carregando...</div>;
+  if (isLoading) {
+    return (
+      <div className={ styles.isLoading }>
+        <Loading />
+      </div>
+    );
   }
 
   const paragraphs = data.description?.split('\n\n');
@@ -62,7 +67,6 @@ function Book() {
               }
             </div>
           </section>
-
         </section>
       </main>
       <Footer />

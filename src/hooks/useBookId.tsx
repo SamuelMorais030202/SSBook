@@ -5,7 +5,7 @@ import { bookId } from '../utils/graphql';
 
 export function useBookId(id : string) {
   const query = bookId(id);
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryFn: () => fetche(query),
     queryKey: ['book', id],
     staleTime: 1000 * 60 * 1,
@@ -13,5 +13,5 @@ export function useBookId(id : string) {
 
   const response = data?.data?.data?.book;
 
-  return { data: response as IBook };
+  return { data: response as IBook, isLoading };
 }
