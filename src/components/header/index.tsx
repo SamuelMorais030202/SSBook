@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import { useNavigate } from 'react-router-dom';
 import styles from './header.module.css';
 import soon from '../../assets/soon.png';
 import iconSearch from '../../assets/icon-search.png';
@@ -6,6 +9,8 @@ import iconFavorite from '../../assets/icon-heart.png';
 import avatar from '../../assets/avatar.png';
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <header className={ styles.headerContainer }>
       <img src={ soon } alt="Logo SSBook" className={ styles.headerLogo } />
@@ -27,7 +32,9 @@ function Header() {
             <img src={ iconAdd } alt="Icon Add" data-testid="icon-add" />
             Adicionar
           </li>
-          <li>
+          <li
+            onClick={ () => navigate('/favorite-books') }
+          >
             <img src={ iconFavorite } alt="Icon Favorite" data-testid="icon-favorite" />
             Favoritos
           </li>

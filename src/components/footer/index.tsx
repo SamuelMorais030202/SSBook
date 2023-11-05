@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import { useNavigate } from 'react-router-dom';
 import logoFooter from '../../assets/soon-footer.png';
 import styles from './footer.module.css';
 import start from '../../assets/start.png';
@@ -6,6 +9,8 @@ import heart from '../../assets/icon-heart.png';
 import search from '../../assets/icon-search.png';
 
 function Footer() {
+  const navigate = useNavigate();
+
   return (
     <footer className={ styles.footerContainer }>
       <div className={ styles.footerForLargerScreens }>
@@ -30,7 +35,9 @@ function Footer() {
             <img src={ search } alt="Search icon" />
             Buscar
           </li>
-          <li>
+          <li
+            onClick={ () => navigate('/favorite-books') }
+          >
             <img src={ heart } alt="Heart icon" />
             Favoritos
           </li>

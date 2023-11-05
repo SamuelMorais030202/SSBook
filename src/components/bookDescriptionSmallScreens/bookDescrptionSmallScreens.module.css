@@ -63,6 +63,13 @@
     color: var(--primary-text);
   }
 
+  .headerDescriptionSmallScreens button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+  }
+
   .textDescriptionSmallScreens {
     font-weight: 400;
     font-size: 16px;

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/jsx-max-depth */
 import React from 'react';
 import { useParams } from 'react-router-dom';
@@ -11,6 +13,7 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import BookDescriptionSmallScreens from '../../components/bookDescriptionSmallScreens';
 import Loading from '../../components/loading';
+import { addBookToFavorites } from '../../utils/addBookToFavorites';
 
 function Book() {
   const isSmallScreen = useMediaQuery({ maxWidth: 768 });
@@ -40,7 +43,7 @@ function Book() {
           <section className={ styles.firstCardBook }>
             <img src={ data?.cover } alt="Author" className={ styles.imageBook } />
             <ul className={ styles.optionsForTheBook }>
-              <li>
+              <li onClick={ () => addBookToFavorites(data) }>
                 <img src={ iconHeart } alt="Icon heart" />
                 Favoritar
               </li>
