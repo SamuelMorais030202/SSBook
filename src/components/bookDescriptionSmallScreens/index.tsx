@@ -32,7 +32,7 @@ function BookDescriptionSmallScreens({
         >
           <header className={ styles.iconsSmallScreens }>
             <button onClick={ () => navigate('/') }>
-              <img src={ iconBack } alt="Icon back" />
+              <img src={ iconBack } alt="Icon back" data-testid="icon-back" />
             </button>
             <button>
               <img src={ iconOverflow } alt="Icon overflow" />
@@ -43,9 +43,11 @@ function BookDescriptionSmallScreens({
         <section className={ styles.descriptionSmallScreens }>
           <header className={ styles.headerDescriptionSmallScreens }>
             <h2>{ name }</h2>
-            <span><img src={ favoriteIcon } alt="Favorite icon" /></span>
+            <span>
+              <img src={ favoriteIcon } alt="Favorite icon" data-testid="favorite-icon" />
+            </span>
           </header>
-          <p className={ styles.nameAuthor }>{ author.name }</p>
+          <p className={ styles.nameAuthor } data-testid="author-name">{ author.name }</p>
           <div className={ styles.textDescriptionSmallScreens }>
             {
               paragraphs?.map((paragraph, index) => (
