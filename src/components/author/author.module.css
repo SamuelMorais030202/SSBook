@@ -28,3 +28,9 @@
   line-height: 16px;
   color: var(--primary-text);
 }
+
+@media (max-width: 767px) {
+  .cardAuthor {
+    min-width: 248px;
+  }
+}

@@ -26,7 +26,7 @@
 }
 
 .listFavoriteAuthors {
-  width: 85%;
+  width: 88%;
   display: flex;
   gap: 24px;
   padding: 10px;
@@ -50,5 +50,9 @@
   .listFavoriteAuthorsHeader span {
     font-size: 15px;
     line-height: 16px;
+  }
+
+  .listFavoriteAuthors {
+    width: 96%;
   }
 }
