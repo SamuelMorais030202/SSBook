@@ -1,27 +1,64 @@
-# React + TypeScript + Vite
+# SSBook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SSBook is a React application that uses Vite and TypeScript to create a catalog of books. It consumes a GraphQL API, allowing users to list various books, view details, mark books as favorites, and filter by book type. It also displays a list of authors.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **List Books:** The main page lists a variety of available books.
+- **Filter by Type:** Users can filter books by type, such as romance, adventure, and comedy.
+- **View Book Details:** Users can click on a book to see additional details.
+- **Mark as Favorite:** Users can mark books as favorites.
+- **View Favorite Books:** Users can access their favorite books on a separate page.
+- **List Authors:** The application displays information about book authors.
+- **Search:** Users can search for specific books.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Clone the Repository:**
 
-- Configure the top-level `parserOptions` property like this:
+   ```bash
+   git clone git@github.com:SamuelMorais030202/SSBook.git
+   cd SSBook
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+2. **Install dependencies if necessary**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ``bash
+   npm install
+
+3. **Start the application**
+
+   ```bash
+   npm run dev
+
+4. **Run all tests**
+
+   ```bash
+   npm run test
+
+## Technologies used
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [React Query](https://react-query.tanstack.com/)
+- [Vitest](https://vitest.org/)
+- [GraphQL](https://graphql.org/)
+
+## Project GitHub
+
+[GitHub-Repository](https://github.com/SamuelMorais030202/SSBook)
+
+## Deploy
+
+The application is available in a production environment. You can access it here:
+
+[SSBook](https://ss-book-7m6f1l8e6-samuelmorais030202.vercel.app/)
+
+## Author
+
+**Samuel Morais**
+- GitHub: [SamuelMorais030202](https://github.com/SamuelMorais030202)
+- Email: moraissamuel009@gmail.com
+- Phone number: (38) 988449448
+   
