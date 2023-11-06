@@ -22,7 +22,7 @@ SSBook is a React application that uses Vite and TypeScript to create a catalog 
 
 2. **Install dependencies if necessary**
 
-   ``bash
+   ```bash
    npm install
 
 3. **Start the application**
